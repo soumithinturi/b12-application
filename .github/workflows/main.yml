@@ -24,7 +24,7 @@ jobs:
           python b12_submit.py \
             --name "${{ secrets.APPLICANT_NAME }}" \
             --email "${{ secrets.APPLICANT_EMAIL }}" \
-            --resume-link "{{ secrets.APPLICANT_RESUME }}" \
+            --resume-link "https://xqubf15dwuu6oksg.public.blob.vercel-storage.com/Soumith_Inturi.pdf" \
             --repository-link "https://github.com/soumithinturi/b12-application" \
             --action-run-link "https://github.com/soumithinturi/b12-application/actions/runs/${{ github.run_id }}"
         env:
