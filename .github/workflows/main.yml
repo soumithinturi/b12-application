@@ -22,9 +22,9 @@ jobs:
       - name: Submit application to B12
         run: |
           python b12_submit.py \
-            --name "Soumith Inturi" \
-            --email "soumithinturi@gmail.com" \
-            --resume-link "https://www.linkedin.com/in/soumith-inturi/" \
+            --name "${{ secrets.APPLICANT_NAME }}" \
+            --email "${{ secrets.APPLICANT_EMAIL }}" \
+            --resume-link "{{ secrets.APPLICANT_RESUME }}" \
             --repository-link "https://github.com/soumithinturi/b12-application" \
             --action-run-link "https://github.com/soumithinturi/b12-application/actions/runs/${{ github.run_id }}"
         env:
